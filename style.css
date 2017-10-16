@@ -1,4 +1,6 @@
 
+@charset "UTF-8"; /* caracteres especiais */ 
+@import url('https://fonts.googleapis.com/css?family=Shrikhand');
 
 body {
     padding: 0; 
