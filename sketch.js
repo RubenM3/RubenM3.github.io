@@ -8,6 +8,7 @@ function preload()
 
 function setup()
 {
+  imageMode(CENTER);
   createCanvas(596, 842);
   frameRate(1);
 }
