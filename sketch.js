@@ -8,6 +8,7 @@ function preload()
 
 function setup()
 {
+  imageMode(CENTER);
   createCanvas(596, 842);
   frameRate(1);
   
@@ -20,7 +21,6 @@ function draw()
   rect (width/2, height/2, 500, 750, 20);
   rectMode (CENTER);
   noFill();
-  imageMode(CENTER);
   image(img, width/2, height/2);
   
     
