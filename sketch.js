@@ -1,6 +1,6 @@
 var yoff = 0.0;  
 var img;
-
+var img2;
 
 
 function setup()
@@ -9,16 +9,17 @@ function setup()
   createCanvas(596, 842, SVG);
   frameRate(1);
   img = loadImage("eva.png");
+  img2 = loadImage("lateral1.png");
 }
 
 function draw() 
 {
   background(255);
   stroke(20);
-  rect (width/2, height/2, 500, 750, 20);
-  rectMode (CENTER);
+  //rect (width/2, height/2, 500, 750, 20);
+  //rectMode (CENTER);
   noFill();
-  image(width/2, height/2, img.width/2, img.height/2);
+  
 
   for (var y=0; y<height+10; y+=10) 
   {
@@ -35,5 +36,7 @@ function draw()
     endShape();
   }
 
+  image(img, width/2, height/2, img.width/2, img.height/2);
+  image(img2, width/2, height/2, img.width/2, img.height/2);
   
 }
