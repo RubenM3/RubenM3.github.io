@@ -1,16 +1,12 @@
 var yoff = 0.0;  
 var img;
 
-function preload() 
-{
-  img = loadImage("eva.png");
-}
 
 function setup()
 {
   createCanvas(596, 842);
   frameRate(1);
-  
+  img = loadImage("eva.png");
 }
 
 function draw() 
