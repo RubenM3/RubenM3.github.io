@@ -9,7 +9,7 @@ function setup()
 
   createCanvas(596, 842);
   frameRate(1);
-  img = loadImage("lateral2.png");
+  img = loadImage("eva.png");
 }
 
 function draw() 
