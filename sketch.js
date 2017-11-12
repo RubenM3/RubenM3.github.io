@@ -3,12 +3,13 @@ var img;
 
 function preload() 
 {
-  img = loadImage("eva.png");
+  img = loadImage("Grupo\eva.png");
 }
 
 function setup()
 {
   imageMode(CENTER);
+  image(img, 0, 0);
   createCanvas(596, 842);
   frameRate(1);
   
@@ -21,8 +22,8 @@ function draw()
   rect (width/2, height/2, 500, 750, 20);
   rectMode (CENTER);
   noFill();
-  image(img, width/2, height/2);
-  
+  image(img, 0, 0);
+  image(img, 0, height/2, img.width/2, img.height/2);
     
 
   for (var y=0; y<height+10; y+=10) 
