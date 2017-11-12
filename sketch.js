@@ -1,5 +1,5 @@
 var yoff = 0.0;  
-var img;
+
 
 
 
@@ -8,7 +8,6 @@ function setup()
 
   createCanvas(596, 842);
   frameRate(1);
-  img = loadImage("eva.png");
  
 }
 
@@ -19,8 +18,7 @@ function draw()
   rect (width/2, height/2, 500, 750, 20);
   rectMode (CENTER);
   noFill();
-  image(width/2, height/2, img.width/2, img.height/2);
-  imageMode(CENTER);
+ 
 
 
   for (var y=0; y<height+10; y+=10) 
