@@ -1,12 +1,6 @@
 var yoff = 0.0;  
 var img;
 
-function preload()
-{
-  meuSVG = loadImage ("meuVector.svg");
-  //meuSVG = loadsvg ("meuVector.svg"); 
-
-}
 
 
 function setup()
@@ -44,13 +38,4 @@ function draw()
   }
 
   
-}
-
-function keyPressed()
-{
-  if (key === " ")
-  {
-    noLoop();
-    save("meuProjecto.svg");
-  }
 }
