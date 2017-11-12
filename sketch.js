@@ -36,6 +36,6 @@ function draw()
     endShape();
   }
 
-  image(img, 0, height/2);
+  image(img, 0, 0);
   
 }
