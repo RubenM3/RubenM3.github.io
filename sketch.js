@@ -8,12 +8,7 @@ function setup()
 
   createCanvas(596, 842, SVG);
   frameRate(1);
-<<<<<<< HEAD
   img = loadImage("eva.png");
-=======
-  img = loadImage("lateral.png");
- 
->>>>>>> parent of 8ac87cf... eva
 }
 
 function draw() 
@@ -23,13 +18,7 @@ function draw()
   rect (width/2, height/2, 500, 750, 20);
   rectMode (CENTER);
   noFill();
-<<<<<<< HEAD
-  image( width/2, height/2, img.width/2, img.height/2);
-
-
-=======
   image(width/2, height/2, img.width/2, img.height/2);
->>>>>>> parent of 8ac87cf... eva
 
   for (var y=0; y<height+10; y+=10) 
   {
