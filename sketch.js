@@ -8,8 +8,8 @@ function setup()
 
   createCanvas(596, 842);
   frameRate(1);
-  img = loadImage("eva.png");
-  img2 = loadImage("lateral.png");
+  img = loadImage("lateral2.png");
+ 
 }
 
 function draw() 
@@ -19,8 +19,8 @@ function draw()
   rect (width/2, height/2, 500, 750, 20);
   rectMode (CENTER);
   noFill();
-  image(img, width/2, height/2, img.width/2, img.height/2);
-  image(img2 , 0 , 0);
+  image(img, 0, 0, img.width/2, img.height/2);
+  
 
 
 
