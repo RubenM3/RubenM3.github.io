@@ -1,13 +1,18 @@
 var yoff = 0.0;  
 var img;
 
+function preload()
+{
+  meuSVG = loadImage ("meuVector.svg");
+  //meuSVG = loadsvg ("meuVector.svg"); 
 
+}
 
 
 function setup()
 {
 
-  createCanvas(596, 842);
+  createCanvas(596, 842, SVG);
   frameRate(1);
   img = loadImage("eva.png");
 }
@@ -39,4 +44,13 @@ function draw()
   }
 
   
+}
+
+function keyPressed()
+{
+  if (key === " ")
+  {
+    noLoop();
+    save("meuProjecto.svg");
+  }
 }
