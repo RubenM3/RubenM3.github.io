@@ -16,7 +16,7 @@ function draw()
   rect (width/2, height/2, 500, 750, 20);
   rectMode (CENTER);
   noFill();
-  image( width/2, height/2,imgwidth/2, imgheight/2);
+  image(img, width/2, height/2,img.width/2, img.height/2);
   
     
 
