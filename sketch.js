@@ -8,7 +8,7 @@ function setup()
 
   createCanvas(596, 842);
   frameRate(1);
-  img = loadImage("eva.png");
+  img = loadImage("lateral2.png");
  
 }
 
@@ -35,6 +35,6 @@ function draw()
     yoff += 0.03;
     endShape();
   }
-  
-  image(img, width/2, height/2, img.width/2, img.height/2);
+
+  image(img, 0, height/2, img.width/2, img.height/2);
 }
