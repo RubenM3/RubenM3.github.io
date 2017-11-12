@@ -20,8 +20,6 @@ function draw()
   rectMode (CENTER);
   noFill();
   
-
-  
   for (var y=0; y<height+10; y+=10) 
   {
     beginShape();
@@ -36,5 +34,7 @@ function draw()
     yoff += 0.03;
     endShape();
   }
-  image(img, width/2, height/2, img.width/2, img.height/2);
+
+  image(width/2, height/2, img.width/2, img.height/2);
+  imageMode(CENTER);
 }
