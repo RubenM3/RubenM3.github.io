@@ -3,7 +3,7 @@ var img;
 
 function preload() 
 {
-  img = loadImage("Grupo\eva.png");
+  img = loadImage("eva.png");
 }
 
 function setup()
