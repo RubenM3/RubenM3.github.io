@@ -8,7 +8,7 @@ function setup()
 
   createCanvas(596, 842);
   frameRate(1);
-  img = loadImage("lateral2.png");
+  img = loadImage("lateral.png");
  
 }
 
@@ -20,7 +20,7 @@ function draw()
   rectMode (CENTER);
   noFill();
   image(width/2, height/2, img.width/2, img.height/2);
-}
+
   
   for (var y=0; y<height+10; y+=10) 
   {
