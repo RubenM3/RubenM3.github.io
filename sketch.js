@@ -19,7 +19,7 @@ function draw()
   rect (width/2, height/2, 500, 750, 20);
   rectMode (CENTER);
   noFill();
- 
+  image( 0, 0 );
   
   for (var y=0; y<height+10; y+=10) 
   {
@@ -36,6 +36,6 @@ function draw()
     endShape();
   }
 
-  image( 0, 0, 596, 842);
+ 
   
 }
