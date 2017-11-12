@@ -1,29 +1,15 @@
-var yoff = 0.0;  
-var img;
+var yoff = 0.0;        // 2nd dimension of perlin noise
 
-function preload() 
-{
-  img = loadImage("eva.png");
-}
-
-function setup()
-{
+function setup() {
   createCanvas(596, 842);
   frameRate(1);
-  
 }
 
-function draw() 
-{
+function draw() {
+
   background(255);
-  stroke(20);
-  rect (width/2, height/2, 500, 750, 20);
-  rectMode (CENTER);
   noFill();
-  imageMode(CENTER);
-  image(img, width/2, height/2);
-  
-    
+  stroke(0);
 
   for (var y=0; y<height+10; y+=10) 
   {
