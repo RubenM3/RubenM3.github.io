@@ -16,7 +16,7 @@ var img;
 
 function setup() 
 {
-  createCanvas(596, 842, SVG);
+  createCanvas(796, 1042, SVG);
   frameRate(1);
   img = loadImage("lateral2.png");  // Carregar a imagem 
 }
