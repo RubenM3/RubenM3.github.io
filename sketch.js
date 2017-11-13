@@ -3,7 +3,7 @@ var img;
 
 
 function setup() {
-  createCanvas(596, 842, SVG);
+  createCanvas(596, 842);
   frameRate(1);
   img = loadImage("lateral.png");
 }
