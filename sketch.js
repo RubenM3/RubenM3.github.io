@@ -4,7 +4,7 @@ var img;
 
 function setup() 
 {
-  createCanvas(596, 842);
+  createCanvas(596, 842, SVG);
   frameRate(1);
   img = loadImage("lateral2.png");
 }
@@ -33,11 +33,18 @@ function draw() {
   }
   
   image(img, 0, 0);
-  image(CENTER);
+
 
   textAlign(CENTER);
   text("3 & 4 de Junho", 10, 40);
   fill(0, 102, 153);
 
-
+  function keyPressed()
+  {
+    if (key === " ")
+    {
+      noLoop();
+      save("meuProjecto.svg");
+    }
+  }
 }
