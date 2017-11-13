@@ -26,7 +26,6 @@ function draw() {
 
   background(255);
   noFill();
-  stroke(0);
   //rect (width/2, height/2, 500, 750, 20);
   //rectMode (CENTER);
 
@@ -35,7 +34,7 @@ function draw() {
   {
     beginShape();
     var xoff = 0;
-    for (var x=0; x<width+10; x+=10) 
+    for (var x=0; x<width+5; x+=5) 
     { // Criar noise 
       var a = noise(xoff, yoff)+1;
       // defenir vertex
