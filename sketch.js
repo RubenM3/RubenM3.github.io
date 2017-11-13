@@ -49,8 +49,8 @@ function draw() {
 
   // localização da imagem
   image(img, 0, 0);
-  lateral2.resize(677, 960);
-  image(lateral2, 0, 0);
+ img.resize(677, 960);
+ 
 
   // Introdução de texto 
   text("3 & 4 de Junho");
