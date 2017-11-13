@@ -48,7 +48,7 @@ function draw() {
   }
   // localização da imagem
   image(img, 0, 0);
-  lateral2.resize(500, 750);
+  lateral2.resize(677, 960);
   image(lateral2, 0, 0);
 
   // Introdução de texto 
