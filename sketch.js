@@ -39,7 +39,7 @@ function draw() {
   // Introdução de texto 
   textAlign(CENTER);
   textStyle('roboto');
-  textSize(150);
+  textSize(80);
   text("3 & 4 de Junho");
   fill(0, 102, 153);
   
