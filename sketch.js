@@ -58,13 +58,4 @@ function draw() {
   text("3 & 4 de Junho");
   fill(0, 102, 153);
   
-  // SVG para prints
-  function keyPressed()
-  {
-    if (key === " ")
-    {
-      noLoop();
-      save("meuProjecto.svg");
-    }
-  }
 }
