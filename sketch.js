@@ -34,5 +34,5 @@ function draw() {
   }
 
   image( width/2, height/2,imgwidth/2, imgheight/2);
-  
+  image(CENTER);
 }
