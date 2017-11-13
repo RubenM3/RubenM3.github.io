@@ -10,6 +10,8 @@ function draw() {
   background(255);
   noFill();
   stroke(0);
+  rect (width/2, height/2, 500, 750, 20);
+  rectMode (CENTER);
 
   for (var y=0; y<height+10; y+=10) 
   {
