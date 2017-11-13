@@ -41,7 +41,7 @@ function draw() {
       // defenir vertex
       vertex(x, y*a); 
       //  defenir X 
-      xoff += 0.10;
+      xoff += 0.07;
     } // defenir Y 
     yoff += 0.03;
     endShape();
@@ -49,7 +49,7 @@ function draw() {
 
   // localização da imagem
   image(img, 0, 0);
- img.resize(677, 960);
+  img.resize(677, 960);
  
 
   // Introdução de texto 
