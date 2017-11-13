@@ -30,11 +30,11 @@ function draw() {
   //rectMode (CENTER);
 
   //criar linhas em movimento
-  for (var y=0; y<height+5; y+=2) 
+  for (var y=0; y<height+10; y+=5) 
   {
     beginShape();
     var xoff = 0;
-    for (var x=0; x<width+5; x+=5) 
+    for (var x=0; x<width+10; x+=5) 
     { // Criar noise 
       var a = noise(xoff, yoff)+1;
       // defenir vertex
