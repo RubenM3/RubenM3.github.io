@@ -46,6 +46,7 @@ function draw() {
     yoff += 0.03;
     endShape();
   }
+
   // localização da imagem
   image(img, 0, 0);
   lateral2.resize(677, 960);
