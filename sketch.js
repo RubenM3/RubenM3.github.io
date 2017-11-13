@@ -1,3 +1,15 @@
+// Ruben Matos 3150547  
+// Daniel Costa 3150548
+// Sofia Monteiro 3150424
+// Jessica Machado 3150550
+// Eva magia
+// 2017/2018 
+// 1º Semestre 
+// Laboratório de Projecto 1 
+// Design Gráfico e Multimédia 
+// Escola Superior de Artes e Design das Caldas da Rainha 
+
+
 var yoff = 0.0;        // 2nd dimension of perlin noise
 var img;
 
