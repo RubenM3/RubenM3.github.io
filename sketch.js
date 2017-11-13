@@ -34,7 +34,7 @@ function draw() {
     endShape();
   }
   // localização da imagem
-  image(img, 0, 0);
+  image(img, 0, 0, 596, 842 );
 
   // Introdução de texto 
   textAlign(CENTER);
