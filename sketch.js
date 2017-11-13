@@ -53,11 +53,11 @@ function draw() {
  
 
   // Introdução de texto 
-  text("3 & 4 de Junho");
-  fill(0, 102, 153);
-  textAlign(CENTER);
-  textStyle('roboto');
-  textSize(80);
+ // text("3 & 4 de Junho");
+  //fill(0, 102, 153);
+  //textAlign(CENTER);
+  //textStyle('roboto');
+  //textSize(80);
   
   
 }
