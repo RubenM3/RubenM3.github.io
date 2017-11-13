@@ -29,18 +29,6 @@ function draw() {
   stroke(0);
   //rect (width/2, height/2, 500, 750, 20);
   //rectMode (CENTER);
-  // localização da imagem
-  image(img, 0, 0);
-  lateral2.resize(677, 960);
-  image(lateral2, 0, 0);
-
-  // Introdução de texto 
-  text("3 & 4 de Junho");
-  textAlign(CENTER);
-  textStyle('roboto');
-  textSize(80);
-  fill(0, 102, 153);
-  
 
   //criar linhas em movimento
   for (var y=0; y<height+10; y+=10) 
@@ -59,6 +47,16 @@ function draw() {
     endShape();
   }
 
-  
+  // localização da imagem
+  image(img, 0, 0);
+  lateral2.resize(677, 960);
+  image(lateral2, 0, 0);
+
+  // Introdução de texto 
+  text("3 & 4 de Junho");
+  textAlign(CENTER);
+  textStyle('roboto');
+  textSize(80);
+  fill(0, 102, 153);
   
 }
