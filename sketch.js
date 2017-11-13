@@ -8,6 +8,7 @@
 // Laboratório de Projecto 1 
 // Design Gráfico e Multimédia 
 // Escola Superior de Artes e Design das Caldas da Rainha 
+// Professor - Marco Heleno 
 
 
 var yoff = 0.0;        // 2nd dimension of perlin noise
@@ -58,5 +59,12 @@ function draw() {
   fill(0, 102, 153);
   
   // SVG para prints
- 
+  function keyPressed()
+  {
+    if (key === " ")
+    {
+      noLoop();
+      save("meuProjecto.svg");
+    }
+  }
 }
