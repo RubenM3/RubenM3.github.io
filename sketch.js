@@ -6,7 +6,7 @@ function setup()
 {
   createCanvas(596, 842, SVG);
   frameRate(1);
-  img = loadImage("lateral2.png");
+  img = loadImage("lateral2.png");  // Carregar a imagem 
 }
 
 function draw() {
@@ -17,28 +17,31 @@ function draw() {
   //rect (width/2, height/2, 500, 750, 20);
   //rectMode (CENTER);
 
+  //criar linhas em movimento
   for (var y=0; y<height+10; y+=10) 
   {
     beginShape();
     var xoff = 0;
     for (var x=0; x<width+10; x+=10) 
-    {
+    { // Criar noise 
       var a = noise(xoff, yoff)+1;
-
+      // defenir vertex
       vertex(x, y*a); 
+      //  defenir X 
       xoff += 0.05;
-    }
+    } // defenir Y 
     yoff += 0.03;
     endShape();
   }
-  
-  image(img, 0, 0);
+  // localização da imagem
+  image(img, width/2, height/2, img.width/2, img.height/2);
 
-
+  // Introdução de texto 
   textAlign(CENTER);
-  text("3 & 4 de Junho", 10, 40);
+  text("3 & 4 de Junho", 60, 40);
   fill(0, 102, 153);
-
+  
+  // SVG para prints
   function keyPressed()
   {
     if (key === " ")
