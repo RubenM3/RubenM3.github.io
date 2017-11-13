@@ -31,7 +31,7 @@ function draw() {
   //rectMode (CENTER);
 
   //criar linhas em movimento
-  for (var y=0; y<height+10; y+=10) 
+  for (var y=0; y<height+5; y+=2) 
   {
     beginShape();
     var xoff = 0;
