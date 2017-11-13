@@ -2,10 +2,11 @@ var yoff = 0.0;        // 2nd dimension of perlin noise
 var img;
 
 
-function setup() {
+function setup() 
+{
   createCanvas(596, 842);
   frameRate(1);
-  img = loadImage("lateral.png");
+  img = loadImage("lateral2.png");
 }
 
 function draw() {
@@ -15,8 +16,6 @@ function draw() {
   stroke(0);
   //rect (width/2, height/2, 500, 750, 20);
   //rectMode (CENTER);
-
-
 
   for (var y=0; y<height+10; y+=10) 
   {
@@ -32,6 +31,7 @@ function draw() {
     yoff += 0.03;
     endShape();
   }
+  
 
   image(img, width/2, height/2, img.width/2, img.height/2);
   image(CENTER);
