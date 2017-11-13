@@ -41,9 +41,9 @@ function draw() {
       // defenir vertex
       vertex(x, y*a); 
       //  defenir X 
-      xoff += 0.05;
+      xoff += 0.07;
     } // defenir Y 
-    yoff += 0.03;
+    yoff += 0.05;
     endShape();
   }
 
