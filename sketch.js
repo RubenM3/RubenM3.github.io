@@ -38,7 +38,9 @@ function draw() {
 
   // Introdução de texto 
   textAlign(CENTER);
-  text("3 & 4 de Junho", 60, 40);
+  textStyle('roboto');
+  textSize(150);
+  text("3 & 4 de Junho");
   fill(0, 102, 153);
   
   // SVG para prints
