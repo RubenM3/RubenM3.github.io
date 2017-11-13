@@ -32,7 +32,12 @@ function draw() {
     endShape();
   }
   
-
   image(img, width/2, height/2, img.width/2, img.height/2);
   image(CENTER);
+  
+  textAlign(CENTER);
+  text("3 & 4 de Junho", 10, 40);
+  fill(0, 102, 153);
+
+
 }
