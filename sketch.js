@@ -18,7 +18,7 @@ var img;
 function setup() 
 {
   createCanvas(677, 960);
-  frameRate(1);
+  frameRate(0,10);
   img = loadImage("lateral2.png");  // Carregar a imagem 
 }
 
@@ -41,9 +41,9 @@ function draw() {
       // defenir vertex
       vertex(x, y*a); 
       //  defenir X 
-      xoff += 0.07;
+      xoff += 0.10;
     } // defenir Y 
-    yoff += 0.05;
+    yoff += 0.03;
     endShape();
   }
 
