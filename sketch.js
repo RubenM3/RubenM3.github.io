@@ -14,8 +14,8 @@ function draw() {
   background(255);
   noFill();
   stroke(0);
-  rect (width/2, height/2, 500, 750, 20);
-  rectMode (CENTER);
+  //rect (width/2, height/2, 500, 750, 20);
+  //rectMode (CENTER);
 
   //criar linhas em movimento
   for (var y=0; y<height+10; y+=10) 
@@ -34,7 +34,7 @@ function draw() {
     endShape();
   }
   // localização da imagem
-  image(img, 0, 0, 596, 842 );
+  image(img, 0, 0 );
 
   // Introdução de texto 
   textAlign(CENTER);
