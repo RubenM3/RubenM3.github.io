@@ -33,6 +33,6 @@ function draw() {
     endShape();
   }
 
-  image( width/2, height/2,imgwidth/2, imgheight/2);
+  image( width/2, height/2,img.width/2, img.height/2);
   image(CENTER);
 }
