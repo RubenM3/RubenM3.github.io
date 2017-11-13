@@ -5,7 +5,7 @@ var img;
 function setup() {
   createCanvas(596, 842);
   frameRate(1);
-  img = loadImage("eva.png");
+  img = loadImage("lateral.png");
 }
 
 function draw() {
@@ -13,8 +13,8 @@ function draw() {
   background(255);
   noFill();
   stroke(0);
-  rect (width/2, height/2, 500, 750, 20);
-  rectMode (CENTER);
+  //rect (width/2, height/2, 500, 750, 20);
+  //rectMode (CENTER);
 
 
 
@@ -33,6 +33,6 @@ function draw() {
     endShape();
   }
 
-  image(img, width/2, height/2 );
+  image( img, width/2, height/2, img.width/2, img.height/2);
   image(CENTER);
 }
