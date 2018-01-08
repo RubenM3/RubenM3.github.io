@@ -1,62 +1,144 @@
-// Ruben Matos 3150547  
-// Daniel Costa 3150548
-// Sofia Monteiro 3150424
-// Jessica Machado 3150550
-// Eva magia
-// 2017/2018 
+// Ruben Matos
+// Nº 3150547
+// 2017/2017 
 // 1º Semestre 
-// Laboratório de Projecto 1 
+// Laboratório de Projecto I 
 // Design Gráfico e Multimédia 
-// Escola Superior de Artes e Design das Caldas da Rainha 
-// Professor - Marco Heleno 
+// ESAD.CR
+// Marco Heleno 
+// 08/01/2018 
 
 
-var yoff = 0.0;        // 2nd dimension of perlin noise
-var img;
+//Array.
+var anos = [];
+//Variável.
+var dados, factor; 
 
 
+//Função que faz load do ficheiro de excel antes do programa arrancar.
+function preload() 
+{
+  dados = loadTable ("assets/dados.csv", "csv", "header");
+}
+
+
+//Função que cria as condições para a função draw funcionar.
 function setup() 
 {
-  createCanvas(677, 960);
-  frameRate(1);
-  img = loadImage("lateral2.png");  // Carregar a imagem 
+   //"createCanvas" syntax que cria o espaço para que o desenho aconteça (Neste caso, toda a largura e altura do ecrã).
+  createCanvas(windowWidth, windowHeight);
+  background(0,0,0);
+  
+ 
+  factor = 5;
+  //print(dados.getRowCount());
+  //print(dados.getColumnCount());
+  //print(dados.getColumn("homens"));
+
+ //Para a variável linha=0 quando o valor de linha é menor que o rowcount acrescenta mais 1 valor.
+  for (var linha=0; linha<dados.getRowCount(); linha++) 
+  {
+    for (var coluna=0; coluna<dados.getColumnCount(); coluna++) 
+    {
+       //Para os dois "for" anteriormente referidos.
+        //A variável "x" contem a largura do ecrã a dividir por o rowcount vezes o valor de "linha".
+      var x = ((width/dados.getRowCount()) * linha) +155;
+      //A variável "y" contem metade da altura do ecrã.
+      var y = height/2 ;
+       //A variável "y" contem metade da altura do ecrã.//A variável "y" contem metade da altura do ecrã.
+      var percurso = dados.getString(linha, 0);
+       //A variável amplitude irá retirar um valor do valor de linha na coluna 1.
+      var km = dados.getNum(linha, 1);
+       //A variável tempo irá retirar um valor do valor de linha na coluna 2.
+      var duração = dados.getNum(linha,2);
+
+      //Array "anos" consoante o valor de linha irá guardar no array "Frequencia" o valor atual das seguites variáveis.
+      anos [linha] = new Ano (x, y, percurso, km, duração, factor);
+      //print(percurso+" - "+km+" - "+duração);
+    }
+  }
 }
 
-function draw() {
-
-  background(255);
-  noFill();
-  //rect (width/2, height/2, 500, 750, 20);
-  //rectMode (CENTER);
-
-  //criar linhas em movimento
-  for (var y=0; y<height+10; y+=5) 
+//Função que irá desenhar no canvas.
+function draw() 
+{
+  
+  for (var i=0; i<dados.getRowCount(); i++)
   {
-    beginShape();
-    var xoff = 0;
-    for (var x=0; x<width+10; x+=5) 
-    { // Criar noise 
-      var a = noise(xoff, yoff)+1;
-      // defenir vertex
-      vertex(x, y*a); 
-      //  defenir X 
-      xoff += 0.07;
-    } // defenir Y 
-    yoff += 0.03;
-    endShape();
+    anos[i].desenha();
+  }
+ //Não repetir o draw.
+noLoop();
+}
+
+
+
+
+function windowResized() 
+{
+  resizeCanvas (windowWidth, windowHeight);
+}
+
+class Ano 
+{
+
+  /*
+     * A classe constructor representa o objecto responsavel pelas barras no ecrã
+     */
+  constructor (x_, y_, percurso_, km_, duração_, factor_)
+  {
+    this.x = x_;
+    this.y = y_;
+    this.percurso = percurso_;
+    this.km = km_;
+    this.duração = duração_;
+    this.factor = factor_;
   }
 
-  // localização da imagem
-  image(img, 0, 0);
-  img.resize(677, 960);
- 
+  //funcao que desenha o objecto frequencia no ecra
+    desenha ()
 
-  // Introdução de texto 
-  text("3 & 4 de Junho");
-  fill(0, 102, 153);
-  textAlign(CENTER);
-  textStyle('roboto');
-  textSize(80);
-  
-  
+    {
+
+     //print(this.percurso+" - "+this.km+" - "+this.duração);
+
+
+     
+      // desenha a duração do percurso 
+      fill( 210, 77, 24);
+      stroke(0);
+      ellipse(this.x, this.y, this.duração);
+      fill(0);
+
+      // desenha os km
+     fill(16, 61, 164, 80);
+     stroke(0);
+     ellipse(this.x, this.y, this.km/this.factor);
+     fill(0);
+
+
+      // desenha a duração do percurso
+      textSize(20);
+      noStroke();
+      fill(255,255,255);
+      textAlign(CENTER,CENTER);
+      text(this.duração, this.x, 600);
+
+    
+    // desenha numero de km 
+     textSize(20);
+     noStroke();
+     fill(255,255,255);
+     textAlign(CENTER,CENTER);
+     text(this.km, this.x, 400);
+
+        // escreve o numero do percurso
+        fill(0);
+        textSize(20);
+        noStroke();
+        textAlign(CENTER,CENTER);
+        text(this.percurso, this.x, this.y);
+    }
 }
+
+
